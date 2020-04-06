@@ -1,0 +1,11 @@
+import 0x0.Account;
+import 0x0.Coins;
+import wallet1jk4ld0uu6wdrj9t8u3gghm9jt583hxx7xp7he8.MyColdStorage;
+
+main(key: bytearray) {
+    let coin: Coins.Coin;
+    
+    coin = MyColdStorage.withdraw(move(key));
+    Account.deposit(get_txn_sender(), move(coin));
+    return;
+}
